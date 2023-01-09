@@ -12,14 +12,14 @@ let render = Matter.Render.create({
 render.canvas.width = window.innerWidth;
 render.canvas.height = window.innerHeight;
 
-let platform = Matter.Bodies.rectangle(1000, 500, 190, 20, { 
+let platform = Matter.Bodies.rectangle(800, 500, 190, 20, { 
   isStatic: true,
   render: {
     fillStyle: "#000000"
   }
 });
 
-let stack = Matter.Composites.stack(920, 300, 4, 4, 0, 0, function(x, y) {
+let stack = Matter.Composites.stack(720, 300, 4, 4, 0, 0, function(x, y) {
     return Matter.Bodies.rectangle(x, y, 40, 40, {
       render: {
         sprite: {
@@ -40,7 +40,7 @@ let mouseConstraint = Matter.MouseConstraint.create(engine, {
 });
 render.mouse = mouse;
 
-const slingPosX = 400;
+const slingPosX = 200;
 const slingPosY = 300;
 
 let ball = createBall();
